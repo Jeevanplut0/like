@@ -1,54 +1,197 @@
-[GAMEPLAY]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Message</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f3f3;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            overflow-x: hidden;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            position: relative;
+        }
+        
+        .page {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            pointer-events: none;
+            padding: 20px;
+        }
+        
+        .page.active {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: all;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #ff6b6b;
+        }
+        
+        .tap-text {
+            font-size: 0.9rem;
+            color: #888;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        
+        .letter {
+            text-align: left;
+            line-height: 1.6;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .letter p, .letter h3 {
+            margin-bottom: 15px;
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        
+        .final-page {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="page active" id="page1">
+            <h1>heloooo</h1>
+            <div class="tap-text">tap to continue</div>
+        </div>
+        
+        <div class="page" id="page2">
+            <div class="letter">
+                <p><strong>Before we start,</strong> first of all, I want to apologize. I know I said I would make an edit, but I have no experience in it, and I need more time. Well, it's a work in progress, you see.</p>
+                
+                <p>And this is not a letter—consider this a <em>trailer</em> for a letter.</p>
+                
+                <p>There are so many things I want to tell you, but words always fall short. No matter how much I text, it never feels enough.</p>
+                
+                <p>But let's start from the beginning.</p>
+                
+                <p>I saw a reel that said, <em>"I would cry if someone wrote me 10 reasons why they love me."</em></p>
+                
+                <p>Well, I can't write 10 reasons why I love you, but I can write 10 reasons why I like you.</p>
+                
+                <p>I'm not good with writing, so sorry if I say something dumb. I know this isn't a good gift, but still… here it goes.and i want this to be special so dont share it to anyone only me and you </p>
+                
+                <h3>10 Reasons Why I Like You:</h3>
+                
+                <p><strong>1.</strong> First, it's just how you are. I don't know why, but in school, I always thought that you were sweet. Probably that's why I had a crush on you. I thought this crush thing wouldn't last long, but it did. And when we started talking—well, you know, I used to get jealous when you talked about your college crush. (I know I'm not your boyfriend, but still… )</p>
+                
+                <p><strong>2.</strong> Those eyes of yours—you see, I used to wonder why people always say eyes are magical. I thought they were dumb for saying that. But even when I'm looking at yours through a mobile screen, they are… I don't even know how to explain it. Like I'm stuck. I look at them at the start of the day and at the end of the day.</p>
+                
+                <p><strong>3.</strong> You see, I like your laugh. I know I've only heard it over the phone, but I'm sure it's even better in real life.</p>
+                
+                <p><strong>4.</strong> Your hair—I haven't seen it in person, but I just know it shines under the moonlight, like something out of a dream.</p>
+                
+                <p><strong>5.</strong> The way you talk—I love hearing your voice. Please call me more. Even the simplest words from you sound special.</p>
+                
+                <p><strong>6.</strong> The way you make me feel—it's something I can't put into words. No matter how my day is going, just talking to you makes everything better.</p>
+                
+                <p><strong>7.</strong> Those cute photos of yours and the adorable faces you make you look really, <em>really</em> cute in them. </p>
+                
+                <p><strong>8.</strong> No matter what I do, you randomly pop up in my mind—even when I'm not trying to think about you. Like that one time I was in an exam, and all I could think about was you… and not just that, even in my <em>dreamsssss</em> omg. </p>
+                
+                <p><strong>9.</strong> The way you make everything feel special. Even the most random conversations or the simplest call with you feel different like they actually make me feel like everything is okayyyy.</p>
+                
+                <p><strong>10.</strong> Simply put, <em>you</em>. Everything about you. I don't even need a reason—it's just you, and that's enoughhh. </p>
+                
+                <p>Even 10 reasons aren't enough. I might just end up writing a whole book just for you. </p>
+                
+                <div class="tap-text">tap to continue</div>
+            </div>
+        </div>
+        
+        <div class="page" id="page3">
+            <div class="final-page">
+                <h1>happy birthday princesss</h1>
+            </div>
+        </div>
+    </div>
 
-; Invaders are other players that will join your world uninvited and try to kill you and your party.  0=FALSE  1=TRUE
-allow_invaders = 1
-
-; Debuffs (Rot Essence) will be acquired when you die, and will only be cured when you sit at a bonfire.  0=FALSE  1=TRUE
-death_debuffs = 1
-
-; Spirit summons can aid you in multiplayer.  0=FALSE  1=TRUE
-allow_summons = 1
-
-; 0 = Normal | 1 = None | 2 = Display player ping | 3 = Display player soul level | 4 = Display player death count | 5 = Soul level AND ping
-overhead_player_display = 0
-
-; Whether to skip the intro logos when booting the game. 0 = FALSE 1 = TRUE
-skip_splash_screens = 0
-
-; Game volume before initial save load. 0 = MUTE 10 = MAX
-default_boot_master_volume = 5
-
-[SCALING]
-
-; Amount of enemy health (%) per player for each enemy. (Default: 35 = 35% more enemy health per player)
-enemy_health_scaling = 35
-
-; Amount of enemy damage (%) per player for each enemy. (Default: 0 = 0% more enemy damage per player)
-enemy_damage_scaling = 0
-
-; Amount of enemy posture absorption (%) per player for each enemy. (Default: 15 = 15% more per player)
-enemy_posture_scaling = 15
-
-; Amount of boss health (%) per player for bosses. (Default: 100 = 100% more boss health per player)
-boss_health_scaling = 100
-
-; Amount of enemy damage (%) per player for bosses. (Default: 0 = 0% more enemy damage towards players, per player)
-boss_damage_scaling = 0
-
-; Amount of boss posture absorption (%) per player for bosses. (Default: 20 = 20% more boss posture per player)
-boss_posture_scaling = 20
-
-[PASSWORD]
-
-; Session password
-cooppassword = pluto
-
-[SAVE]
-
-;Your save file extension (in the vanilla game this is .sl2). Use any alphanumeric characters (limit = 120)
-save_file_extension = co2
-
-[LANGUAGE]
-
-;Leave this blank unless you want to load a custom locale file. The mod will default to your game language.
-mod_language_override = 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const page1 = document.getElementById('page1');
+            const page2 = document.getElementById('page2');
+            const page3 = document.getElementById('page3');
+            const letter = document.querySelector('.letter');
+            const paragraphs = letter.querySelectorAll('p, h3');
+            
+            // First page tap to continue
+            page1.addEventListener('click', function() {
+                page1.classList.remove('active');
+                page2.classList.add('active');
+                
+                // Start animating paragraphs
+                animateParagraphs();
+            });
+            
+            // Second page tap to continue
+            page2.querySelector('.tap-text').addEventListener('click', function() {
+                page2.classList.remove('active');
+                page3.classList.add('active');
+            });
+            
+            function animateParagraphs() {
+                paragraphs.forEach((paragraph, index) => {
+                    setTimeout(() => {
+                        paragraph.style.animation = 'fadeIn 1.5s forwards';
+                    }, index * 1000); // Delay each paragraph by 1 second
+                });
+            }
+        });
+    </script>
+</body>
+</html>
